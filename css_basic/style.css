@@ -1,18 +1,44 @@
 body{
     display: flex;
     flex-direction: column;
+    background-color: #c9e4ca;
+    color: #0a1128;
+    border: none; 
 }
 main{
     display: flex;
     flex-direction: row;
     flex: auto;
+    background: #87bba2;
+    color: #0a1128;
+    border-radius: 20px;
 }
 article{
     flex:2; 
     overflow-y: auto; 
+    
 
 }
 aside{
     flex:1;
     overflow-y: auto; 
+    background: #55828b;
+    border-radius:10px ;
+   
+}
+aside p {
+    color:#c9e4ca; 
+    background-color: #364958;
+}
+
+nav{
+    color:#364958; 
+    border-radius: 20px;
+    border: 2px solid #0a1128; 
+    padding: 20px 20px; 
+    color: #0a1128; 
+}
+
+ul {
+    color:#0a1128; 
 }
