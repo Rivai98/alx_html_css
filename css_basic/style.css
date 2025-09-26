@@ -4,6 +4,9 @@ body{
     background-color: #c9e4ca;
     color: #0a1128;
     border: none; 
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 10px;
 }
 main{
     display: flex;
@@ -12,23 +15,43 @@ main{
     background: #87bba2;
     color: #0a1128;
     border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px 0;
 }
 article{
     flex:2; 
     overflow-y: auto; 
-    
-
+    padding: 20px;
+    background: linear-gradient(135deg, #87bba2, #a8d5ba);
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 aside{
     flex:1;
     overflow-y: auto; 
     background: #55828b;
-    border-radius:10px ;
-   
+    border-radius:10px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 aside p {
     color:#c9e4ca; 
     background-color: #364958;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(45deg, #364958, #55828b);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 nav{
@@ -37,8 +60,128 @@ nav{
     border: 2px solid #0a1128; 
     padding: 20px 20px; 
     color: #0a1128; 
+    background: rgba(201, 228, 202, 0.9);
+    margin: 5px;
 }
 
 ul {
     color:#0a1128; 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+li {
+    margin: 0;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 2em;
+    margin-right: 15px;
+    animation: rocket-bounce 2s infinite;
+}
+
+@keyframes rocket-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Article content styling */
+article h1 {
+    color: #0a1128;
+    font-family: 'Yeseva One', cursive;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+article h2 {
+    color: #364958;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #55828b;
+    padding-bottom: 5px;
+}
+
+article h3 {
+    color: #0a1128;
+    background: #c9e4ca;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 15px 0 10px 0;
+}
+
+article h4 {
+    color: #55828b;
+    font-weight: normal;
+    font-style: italic;
+}
+
+article p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #c9e4ca;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #87bba2;
+}
+
+table thead tr {
+    background: #364958;
+    color: #c9e4ca;
+    font-weight: bold;
+}
+
+table tbody tr:hover {
+    background: #a8d5ba;
+}
+
+/* Links styling */
+a {
+    color: #0a1128;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #55828b;
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background: #364958;
+    color: #c9e4ca;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer a {
+    color: #87bba2;
+}
+
+footer a:hover {
+    color: #c9e4ca;
 }
