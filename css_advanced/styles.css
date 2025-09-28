@@ -1,0 +1,280 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    background-image: url('http://localhost:3845/assets/02783812f9da308b090ff05e9e86fa2affd8ea9f.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(41, 48, 61, 0.0001) 0%, rgba(7, 22, 41, 1) 100%);
+    z-index: 1;
+}
+
+/* Header styles */
+header {
+    position: relative;
+    z-index: 10;
+    padding: 35px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 37px;
+    height: 30px;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul a:hover {
+    opacity: 0.8;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: calc(100vh - 140px);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 120px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+    line-height: 1;
+}
+
+.hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 38px;
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+}
+
+.hero-content button {
+    background: linear-gradient(135deg, #C271FF 0%, #9356DC 100%);
+    border: none;
+    border-radius: 22px;
+    padding: 14px 32px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 65px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(194, 113, 255, 0.4);
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    color: white;
+}
+
+.learn {
+    color: #C271FF;
+    font-weight: normal;
+}
+
+/* Instructors Section */
+.instructors {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 65px;
+    flex-wrap: wrap;
+}
+
+.instructor {
+    text-align: center;
+    max-width: 150px;
+}
+
+.instructor img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.instructor h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.instructor p {
+    font-size: 16px;
+    color: white;
+    font-style: italic;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav {
+        padding: 0 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 80px;
+    }
+    
+    .instructors {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .logo {
+        justify-content: center;
+    }
+    
+    nav ul {
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-features {
+        gap: 30px;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    
+    .instructors {
+        gap: 25px;
+        margin-top: 50px;
+    }
+    
+    .instructor {
+        max-width: 120px;
+    }
+    
+    .instructor img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .instructor h3 {
+        font-size: 16px;
+    }
+    
+    .instructor p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    
+    .instructors {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .instructor {
+        max-width: 180px;
+    }
+    
+    .instructor img {
+        width: 100px;
+        height: 100px;
+    }
+}
