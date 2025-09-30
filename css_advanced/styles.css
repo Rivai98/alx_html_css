@@ -5,7 +5,7 @@ body{
     margin: 0 ; 
     background-image: url(./images/Object.png) ;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 
 /* Mobile responsiveness for body background */
@@ -202,4 +202,16 @@ h3{
 
 
 /*quote*/
-
+.qoute-wrapper{
+    background-color: #C271FF;
+    display: flex;
+    margin: 5em 0 5em 0;
+    padding: 6em 0 6em 0;
+    justify-content: center; 
+     
+}
+.quote-text{
+    margin: 1rem;
+    color: white;
+  
+}
